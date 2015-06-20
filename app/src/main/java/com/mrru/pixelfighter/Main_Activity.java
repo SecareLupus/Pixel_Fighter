@@ -1,17 +1,18 @@
 package com.mrru.pixelfighter;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.SurfaceView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
 import android.widget.TabHost;
 
+import java.util.Vector;
 
-public class Main_Activity extends ActionBarActivity {
+
+public class Main_Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,29 @@ public class Main_Activity extends ActionBarActivity {
         sometab.setContent(R.id.defend);
         sometab.setIndicator("Defend");
         tabs.addTab(sometab);
+        game();
+    }
+
+    private void game() {
+        //Two Fighters
+        //Two Combat Logs
+        while(true) {
+            /**
+             * Steps to take each game loop:
+             * * Check gamestate
+             *   - Check life totals.
+             *   - Check body damage.
+             *   - Check fatigue totals.
+             * * Check each fighter for a "nextTick"
+             *   - if so, call both act methods.
+             *   - else, request input from each player who must give it then continue;.
+             * * Compare current ticks, and alter remaining action ticks if necessary
+             * * render()
+             *   - Call the render function of each fighter separately, as the methods are swappable.
+             */
+            int x = 0;
+            break;
+        }
     }
 
     @Override
